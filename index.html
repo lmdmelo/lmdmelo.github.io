@@ -120,14 +120,15 @@ footer{padding:28px 0 40px;font-size:.85rem;color:var(--mu)}
 .cb p{font-size:.95rem;color:var(--mu)}
 .bx b{color:var(--ink)}
 .sm{font-size:.85rem}
-.tbl{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:380px;font-size:.88rem}
+.tbl{overflow:visible}
+table{border-collapse:collapse;width:100%;table-layout:auto;font-size:.88rem}
 th{font:700 .7rem var(--fb);letter-spacing:.08em;text-transform:uppercase;color:var(--mu);text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--ln)}
-td{padding:8px 10px 8px 0;border-bottom:1px solid var(--ln);vertical-align:top}
+td{overflow-wrap:break-word;padding:8px 10px 8px 0;border-bottom:1px solid var(--ln);vertical-align:top}
 .ba{display:grid;gap:6px;padding-top:12px;border-top:1px solid var(--ln)}
 .ba:first-of-type{border-top:0;padding-top:0}
 .ba .why{font-size:.88rem}
-@media (max-width:900px){.cb{grid-template-columns:1fr}.tw{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto;position:static;padding-bottom:8px}.tabs button{width:auto;flex:none}}
+@media (max-width:600px){table{font-size:.8rem}th{letter-spacing:.04em}td,th{padding-right:8px}}
+@media (max-width:900px){.cb{grid-template-columns:1fr}.tw{grid-template-columns:1fr}.tabs{flex-direction:row;flex-wrap:wrap;position:static}.tabs button{width:auto;flex:none}}
 .certs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0 28px}
 .certs li{border-top:1px solid var(--ln);padding:12px 0;display:grid;gap:2px;font-size:.95rem}
 .certs li span{color:var(--mu);font-size:.85rem}
@@ -280,7 +281,7 @@ td{padding:8px 10px 8px 0;border-bottom:1px solid var(--ln);vertical-align:top}
     <div class="r">
       <div class="bx"><span class="k">Decisões por trás do texto</span><ul><li>As publicações alternam educação, demonstração e convite.</li><li>Nem todo post pede venda direta.</li><li>O calendário respeita uma frequência possível.</li><li>As pautas podem ser reaproveitadas em blog, e-mail e redes sociais.</li></ul></div>
       <div class="bx hl"><span class="k">O que seria entregue ao cliente</span><ul><li>Calendário editorial mensal</li><li>Tema, formato, canal, data e objetivo de cada publicação</li></ul></div></div>
-    <div class="bx" style="grid-column:1/-1"><span class="k">Calendário editorial demonstrativo</span><div class="tbl"><table style="min-width:560px"><thead><tr><th>Semana · dia</th><th>Pauta</th><th>Formato</th><th>Objetivo</th></tr></thead><tbody>
+    <div class="bx" style="grid-column:1/-1"><span class="k">Calendário editorial demonstrativo</span><div class="tbl"><table><thead><tr><th>Semana · dia</th><th>Pauta</th><th>Formato</th><th>Objetivo</th></tr></thead><tbody>
       <tr><td>1 · Seg</td><td>O que faz um redator freelancer?</td><td>Carrossel</td><td>Explicar o serviço</td></tr>
       <tr><td>1 · Qua</td><td>Seu site explica o que sua empresa faz?</td><td>Reels</td><td>Gerar identificação</td></tr>
       <tr><td>1 · Sex</td><td>Antes e depois de um texto de serviço</td><td>Carrossel</td><td>Demonstrar método</td></tr>
