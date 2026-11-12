@@ -49,13 +49,19 @@ section{padding-block:clamp(52px,8vw,96px)}
 .dots i{width:28px;height:6px;border-radius:9px}
 .dots i:nth-child(1){background:var(--p)}.dots i:nth-child(2){background:var(--c2)}.dots i:nth-child(3){background:var(--c3)}.dots i:nth-child(4){background:var(--c4)}
 .hero h1{font-size:clamp(2rem,5vw,3.5rem)}
+.hero h1 .h1b{display:block;margin-top:.2em}
+.ex{display:grid;gap:8px}
+.ex+.ex{border-top:1px solid var(--ln);padding-top:14px}
+.proof .nt{font-size:.85rem;line-height:1.5;color:var(--mu)}
 .hero h1 em{font-style:normal;color:var(--p)}
 .lead{margin-top:22px;max-width:56ch;font-size:1.1rem;color:var(--mu)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .proof{background:var(--sf);border:1px solid var(--ln);border-radius:var(--r);padding:clamp(18px,3vw,28px);display:grid;gap:12px}
 .proof p{font-size:1.1rem;line-height:1.5}
-del{color:var(--mu);text-decoration-color:var(--c2);text-decoration-thickness:2px}
-ins{text-decoration:none;background:var(--hl);color:var(--ink);font-weight:700;padding:.05em .25em;border-radius:4px}
+del{color:var(--mu);text-decoration-line:line-through;text-decoration-color:var(--c2);text-decoration-thickness:2px}
+ins{text-decoration:none;background:#E6F4EA;color:#137333;font-weight:700;padding:.05em .25em;border-radius:4px}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) ins{background:rgba(129,201,149,.22);color:#A8DAB5}}
+:root[data-theme=dark] ins{background:rgba(129,201,149,.22);color:#A8DAB5}
 .cy>*{--cc:var(--p)}.cy>:nth-child(4n+2){--cc:var(--c2)}.cy>:nth-child(4n+3){--cc:var(--c3)}.cy>:nth-child(4n+4){--cc:var(--c4)}
 .pil{list-style:none;padding:0;margin:clamp(36px,5vw,56px) 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .pil li{border-top:4px solid var(--cc);padding-top:12px;display:grid;gap:4px;align-content:start}
@@ -149,16 +155,17 @@ td{overflow-wrap:break-word;padding:8px 10px 8px 0;border-bottom:1px solid var(-
   <div class="hg">
     <div>
       <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <span class="k" style="margin-bottom:12px">Redação, SEO e planejamento de conteúdo</span>
-      <h1>Conteúdo <em>planejado, escrito e revisado</em>, do briefing à publicação.</h1>
+      <span class="k" style="margin-bottom:12px">Redator freelancer · SEO e conteúdo digital</span>
+      <h1>Sua marca tem o que dizer. <span class="h1b">Eu ajudo a colocar em palavras.</span></h1>
       <p class="lead">Planejamento e produção de conteúdo para sites, blogs e campanhas, com pesquisa, revisão e linguagem alinhada à sua marca. Você compartilha o objetivo; eu organizo as informações e desenvolvo o conteúdo.</p>
-      <div class="cta"><a class="btn" href="#contato">Vamos falar do seu projeto</a><a class="btn o" href="#trabalho">Conheça meu trabalho</a></div>
+      <div class="cta"><a class="btn" href="#trabalho">Ver amostras</a><a class="btn o" href="#contato">Falar sobre o meu projeto</a></div>
     </div>
-    <aside class="proof" aria-label="Exemplo de revisão">
+    <aside class="proof" aria-label="Exemplos de revisão">
       <span class="k">Revisão na prática · antes e depois</span>
-      <p><del>Para solicitar informações sobre os serviços disponibilizados pela nossa empresa, entre em contato por meio do formulário abaixo.</del></p>
-      <p><ins>Quer conhecer nossos serviços? Envie sua dúvida pelo formulário.</ins></p>
-      <p style="font-size:.9rem;color:var(--mu)">O que mudou: menos formalidade, ação explícita e sentido preservado.</p>
+      <div class="ex"><p><del>Nossa empresa preza pela excelência e qualidade no atendimento ao cliente.</del></p><p><ins>Respondemos todo orçamento em até 24 horas.</ins></p><p class="nt">— Troca o elogio por uma promessa que o cliente pode conferir.</p></div>
+      <div class="ex"><p><del>Clique aqui para saber mais.</del></p><p><ins>Veja os planos e os preços.</ins></p><p class="nt">— O link diz para onde leva, e o leitor decide antes de clicar.</p></div>
+      <div class="ex"><p><del>Dicas incríveis sobre marketing digital!</del></p><p><ins>Como aparecer no Google sem pagar anúncio</ins></p><p class="nt">— O título promete uma resposta e traz a busca do leitor.</p></div>
+      <p class="nt">Exemplos autorais de revisão.</p>
     </aside>
   </div>
   <ul class="pil cy">
